@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../discriminator-default-normalizer/.idea/discriminator-default-normalizer.iml" filepath="$PROJECT_DIR$/../discriminator-default-normalizer/.idea/discriminator-default-normalizer.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/openapi-php.iml" filepath="$PROJECT_DIR$/.idea/openapi-php.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../php/.idea/php.iml" filepath="$PROJECT_DIR$/../php/.idea/php.iml" />
     </modules>
   </component>
 </project>

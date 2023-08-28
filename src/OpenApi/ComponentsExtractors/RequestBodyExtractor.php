@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\OpenapiGenerator\OpenApi\ComponentsExtractors;
+namespace SoftFineWare\OpenapiGenerator\OpenApi\ComponentsExtractors;
 
 use Exception;
-use Homeapp\OpenapiGenerator\ArrayPathFetcher;
-use Homeapp\OpenapiGenerator\Deffenition\ClassDefinitionData;
-use Homeapp\OpenapiGenerator\NamespaceHelper;
-use Homeapp\OpenapiGenerator\OpenApi\DefinitionExtractor\PropertyExtractor;
-use Homeapp\OpenapiGenerator\OpenApi\RefData;
-use Homeapp\OpenapiGenerator\PHP\ConstructorGenerator;
+use SoftFineWare\OpenapiGenerator\ArrayPathFetcher;
+use SoftFineWare\OpenapiGenerator\Deffenition\ClassDefinitionData;
+use SoftFineWare\OpenapiGenerator\NamespaceHelper;
+use SoftFineWare\OpenapiGenerator\OpenApi\DefinitionExtractor\PropertyExtractor;
+use SoftFineWare\OpenapiGenerator\OpenApi\RefData;
+use SoftFineWare\OpenapiGenerator\PHP\ConstructorGenerator;
 use Nette\PhpGenerator\ClassType;
 use Psr\Log\LoggerInterface;
 

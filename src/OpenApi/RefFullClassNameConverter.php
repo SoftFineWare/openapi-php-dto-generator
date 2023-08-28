@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\OpenapiGenerator\OpenApi;
+namespace SoftFineWare\OpenapiGenerator\OpenApi;
 
-use Homeapp\OpenapiGenerator\NamespaceHelper;
+use SoftFineWare\OpenapiGenerator\NamespaceHelper;
 
 class RefFullClassNameConverter
 {

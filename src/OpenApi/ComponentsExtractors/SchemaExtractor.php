@@ -2,31 +2,30 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\OpenapiGenerator\OpenApi\ComponentsExtractors;
+namespace SoftFineWare\OpenapiGenerator\OpenApi\ComponentsExtractors;
 
 use Exception;
-use Homeapp\OpenapiGenerator\Deffenition\ClassDefinitionData;
-use Homeapp\OpenapiGenerator\NamespaceHelper;
-use Homeapp\OpenapiGenerator\OpenApi\DefinitionExtractor\PropertyExtractor;
-use Homeapp\OpenapiGenerator\PHP\ConstructorGenerator;
+use SoftFineWare\OpenapiGenerator\Deffenition\ClassDefinitionData;
+use SoftFineWare\OpenapiGenerator\NamespaceHelper;
+use SoftFineWare\OpenapiGenerator\OpenApi\DefinitionExtractor\PropertyExtractor;
+use SoftFineWare\OpenapiGenerator\PHP\ConstructorGenerator;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\Method;
 
 class SchemaExtractor
 {
     private const SUB_NAMESPACE = 'Schemas';
-    private ConstructorGenerator $constructorGenerator;
-    private NamespaceHelper $namespaceHelper;
-    private PropertyExtractor $propertyExtractor;
+
+    private const SUPPORTED_TYPES = ['object', 'array'];
 
     /**
      * @psalm-suppress PossiblyUnusedMethod
      */
-    public function __construct(ConstructorGenerator $constructorGenerator, NamespaceHelper $namespaceHelper, PropertyExtractor $propertyExtractor)
-    {
-        $this->constructorGenerator = $constructorGenerator;
-        $this->namespaceHelper = $namespaceHelper;
-        $this->propertyExtractor = $propertyExtractor;
+    public function __construct(
+        private readonly ConstructorGenerator $constructorGenerator,
+        private readonly NamespaceHelper      $namespaceHelper,
+        private readonly PropertyExtractor    $propertyExtractor
+    ) {
     }
 
     /**
@@ -46,9 +45,14 @@ class SchemaExtractor
          * @var string|null $description
          * @var string $type
          */
-        if ($type !== 'object') {
+        if (!in_array($type, self::SUPPORTED_TYPES)) {
             throw new Exception(sprintf('Type "%s" is not implemented. Schema name: %s', $type, $schemaName));
         }
+        if ($type === 'array') {
+
+
+        }
+
         $class = new ClassType($schemaName);
         if ($description) {
             $class->addComment($description);

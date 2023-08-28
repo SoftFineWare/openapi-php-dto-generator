@@ -2,15 +2,8 @@
 <?php
 require dirname(__DIR__) . '/vendor/autoload.php';
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
-function dd(... $arguments)
-{
-    foreach ($arguments as $argument) {
-        var_dump($argument);
-    }
-    die;
-}
 
-use Homeapp\OpenapiGenerator\Command\CreateDTO;
+use SoftFineWare\OpenapiGenerator\Command\CreateDTO;
 use Symfony\Component\Console\Application;
 
 $di = require dirname(__DIR__) . '/config/di.php';

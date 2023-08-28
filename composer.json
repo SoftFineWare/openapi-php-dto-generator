@@ -1,10 +1,10 @@
 {
-    "name": "homeapp/php-skeleton",
+    "name": "softfineware/openapi-php-dto-generator",
     "description": "A basic template for creating php packages with basic setup: psalm, php-cs-fixer, phpunit, CI with running test",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Homeapp\\OpenapiGenerator\\": "src"
+            "SoftFineWare\\OpenapiGenerator\\": "src"
         }
     },
     "minimum-stability": "stable",
@@ -22,17 +22,19 @@
     ],
     "require": {
         "ext-json": "*",
-        "php": "^7.4",
-        "nette/php-generator": "^3.5",
-        "symfony/console": "^5.3",
+        "php": "^8.2",
+        "nette/php-generator": "^4",
         "php-di/php-di": "^6.3",
-        "monolog/monolog": "^2.3",
-        "symfony/yaml": "^5.3"
+        "monolog/monolog": "^3",
+        "symfony/yaml": "^6",
+        "nette/utils": "^3.2",
+        "symfony/console": "^6",
+        "phpspec/prophecy": "^1.3",
+        "symfony/dependency-injection": "^6.3"
     },
     "require-dev": {
-        "vimeo/psalm": "^4.7",
-        "friendsofphp/php-cs-fixer": "^3.0",
-        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.23",
+        "phpunit/phpunit": "^10",
         "roave/security-advisories": "dev-latest"
     }
 }

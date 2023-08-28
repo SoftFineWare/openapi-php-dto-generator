@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Test;
 
-use Homeapp\OpenapiGenerator\NamespaceHelper;
+use PHPUnit\Framework\Attributes\CoversClass;
+use SoftFineWare\OpenapiGenerator\NamespaceHelper;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \Homeapp\OpenapiGenerator\NamespaceHelper
- */
+#[CoversClass(NamespaceHelper::class)]
 class NamespaceHelperTest extends TestCase
 {
     private NamespaceHelper $helper;

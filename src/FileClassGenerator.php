@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\OpenapiGenerator;
+namespace SoftFineWare\OpenapiGenerator;
 
-use Homeapp\OpenapiGenerator\Command\CreateDTO;
-use Homeapp\OpenapiGenerator\Deffenition\ClassDefinitionData;
-use Homeapp\OpenapiGenerator\Writer;
+use SoftFineWare\OpenapiGenerator\Command\CreateDTO;
+use SoftFineWare\OpenapiGenerator\Deffenition\ClassDefinitionData;
+use SoftFineWare\OpenapiGenerator\Writer;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\PhpFile;
 use Nette\PhpGenerator\Printer;

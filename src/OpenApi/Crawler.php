@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\OpenapiGenerator\OpenApi;
+namespace SoftFineWare\OpenapiGenerator\OpenApi;
 
-use Homeapp\OpenapiGenerator\Deffenition\ClassDefinitionData;
-use Homeapp\OpenapiGenerator\OpenApi\ComponentsExtractors\RequestBodyExtractor;
-use Homeapp\OpenapiGenerator\OpenApi\ComponentsExtractors\ResponseExtractor;
-use Homeapp\OpenapiGenerator\OpenApi\ComponentsExtractors\SchemaExtractor;
+use SoftFineWare\OpenapiGenerator\Deffenition\ClassDefinitionData;
+use SoftFineWare\OpenapiGenerator\OpenApi\ComponentsExtractors\RequestBodyExtractor;
+use SoftFineWare\OpenapiGenerator\OpenApi\ComponentsExtractors\ResponseExtractor;
+use SoftFineWare\OpenapiGenerator\OpenApi\ComponentsExtractors\SchemaExtractor;
 use Psr\Log\LoggerInterface;
 
 class Crawler
@@ -36,9 +36,9 @@ class Crawler
     {
         [
             'components' => [
-            'responses' => $responses,
+//            'responses' => $responses,
             'schemas' => $schemas,
-            'requestBodies' => $requestBodies,
+//            'requestBodies' => $requestBodies,
         ]] = $openapi;
         /**
          * @var array<string, array> $requestBodies
@@ -52,20 +52,20 @@ class Crawler
             yield $this->schemaExtractor->extractSchema($schemaName, $schema);
         }
 
-        foreach ($responses as $responseName => $responseStructure) {
-            yield $this->responseExtractor->extractResponse($responseName, $responseStructure);
-        }
-
-        foreach ($requestBodies as $requestBodyName => $requestBody) {
-            try {
-                yield $this->requestBodyExtractor->extractResponseBody($requestBodyName, $requestBody, $openapi);
-            } catch (\Exception $exception) {
-                $this->logger->error('Cannot create RequestBody "{requestBodyName}"', [
-                    'requestBodyName' => $requestBodyName,
-                    'requestBody' => $requestBody,
-                    'exception' => (string) $exception,
-                ]);
-            }
-        }
+//        foreach ($responses as $responseName => $responseStructure) {
+//            yield $this->responseExtractor->extractResponse($responseName, $responseStructure);
+//        }
+//
+//        foreach ($requestBodies as $requestBodyName => $requestBody) {
+//            try {
+//                yield $this->requestBodyExtractor->extractResponseBody($requestBodyName, $requestBody, $openapi);
+//            } catch (\Exception $exception) {
+//                $this->logger->error('Cannot create RequestBody "{requestBodyName}"', [
+//                    'requestBodyName' => $requestBodyName,
+//                    'requestBody' => $requestBody,
+//                    'exception' => (string) $exception,
+//                ]);
+//            }
+//        }
     }
 }

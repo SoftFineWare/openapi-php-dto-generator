@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\OpenapiGenerator;
+namespace SoftFineWare\OpenapiGenerator;
 
 use phpDocumentor\Reflection\DocBlock\Tags\Param;
 

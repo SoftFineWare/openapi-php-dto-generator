@@ -2,17 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\OpenapiGenerator\Command;
+namespace SoftFineWare\OpenapiGenerator\Command;
 
-use Homeapp\OpenapiGenerator\Deffenition\ClassDefinitionData;
-use Homeapp\OpenapiGenerator\NamespaceHelper;
-use Homeapp\OpenapiGenerator\OpenApi\Reader;
+use SoftFineWare\OpenapiGenerator\Deffenition\ClassDefinitionData;
+use SoftFineWare\OpenapiGenerator\NamespaceHelper;
+use SoftFineWare\OpenapiGenerator\OpenApi\Reader;
 use RuntimeException;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Exception\LogicException;
 use JsonException;
-use Homeapp\OpenapiGenerator\FileClassGenerator;
-use Homeapp\OpenapiGenerator\OpenApi\Crawler;
-use Homeapp\OpenapiGenerator\FileClassGeneratorFactory;
+use SoftFineWare\OpenapiGenerator\FileClassGenerator;
+use SoftFineWare\OpenapiGenerator\OpenApi\Crawler;
+use SoftFineWare\OpenapiGenerator\FileClassGeneratorFactory;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Exception\InvalidArgumentException;
 use Symfony\Component\Console\Input\InputArgument;
@@ -21,6 +22,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Yaml\Exception\ParseException;
 
+#[AsCommand('create-dto')]
 final class CreateDTO extends Command
 {
     private FileClassGenerator $fileClassGenerator;
@@ -45,7 +47,6 @@ final class CreateDTO extends Command
         $this->namespaceHelper = $namespaceHelper;
     }
 
-    protected static $defaultName = 'create-dto';
     /**
      * @throws InvalidArgumentException
      */
@@ -65,7 +66,7 @@ final class CreateDTO extends Command
                 null,
                 InputOption::VALUE_OPTIONAL,
                 'Namespace what all generated classes will have',
-                'Generated\\'
+                'Generated'
             );
     }
 

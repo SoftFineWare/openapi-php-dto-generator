@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\OpenapiGenerator\Deffenition;
+namespace SoftFineWare\OpenapiGenerator\Deffenition;
 
 use Nette\PhpGenerator\ClassType;
 

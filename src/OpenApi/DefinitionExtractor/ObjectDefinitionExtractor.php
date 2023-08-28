@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\OpenapiGenerator\OpenApi\DefinitionExtractor;
+namespace SoftFineWare\OpenapiGenerator\OpenApi\DefinitionExtractor;
 
-use Homeapp\OpenapiGenerator\Command\CreateDTO;
-use Homeapp\OpenapiGenerator\Deffenition\ClassDefinitionData;
-use Homeapp\OpenapiGenerator\NamespaceHelper;
-use Homeapp\OpenapiGenerator\OpenApi\RefFullClassNameConverter;
-use Homeapp\OpenapiGenerator\OpenApi\TypeMapper;
-use Homeapp\OpenapiGenerator\PHP\ConstructorGenerator;
+use SoftFineWare\OpenapiGenerator\Command\CreateDTO;
+use SoftFineWare\OpenapiGenerator\Deffenition\ClassDefinitionData;
+use SoftFineWare\OpenapiGenerator\NamespaceHelper;
+use SoftFineWare\OpenapiGenerator\OpenApi\RefFullClassNameConverter;
+use SoftFineWare\OpenapiGenerator\OpenApi\TypeMapper;
+use SoftFineWare\OpenapiGenerator\PHP\ConstructorGenerator;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\Method;
 use Nette\PhpGenerator\Parameter;

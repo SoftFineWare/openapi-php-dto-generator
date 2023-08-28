@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\OpenapiGenerator\OpenApi\DefinitionExtractor;
+namespace SoftFineWare\OpenapiGenerator\OpenApi\DefinitionExtractor;
 
-use Homeapp\OpenapiGenerator\OpenApi\RefFullClassNameConverter;
-use Homeapp\OpenapiGenerator\OpenApi\TypeMapper;
+use SoftFineWare\OpenapiGenerator\OpenApi\RefFullClassNameConverter;
+use SoftFineWare\OpenapiGenerator\OpenApi\TypeMapper;
 use Nette\PhpGenerator\Property;
 
 class PropertyExtractor

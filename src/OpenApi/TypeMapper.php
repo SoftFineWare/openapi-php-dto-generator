@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\OpenapiGenerator\OpenApi;
+namespace SoftFineWare\OpenapiGenerator\OpenApi;
 
 use Nette\PhpGenerator\Type;
 use Psr\Log\LoggerInterface;

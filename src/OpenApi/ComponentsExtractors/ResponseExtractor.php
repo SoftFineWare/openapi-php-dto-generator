@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Homeapp\OpenapiGenerator\OpenApi\ComponentsExtractors;
+namespace SoftFineWare\OpenapiGenerator\OpenApi\ComponentsExtractors;
 
 use Exception;
-use Homeapp\OpenapiGenerator\Deffenition\ClassDefinitionData;
-use Homeapp\OpenapiGenerator\OpenApi\DefinitionExtractor\ObjectDefinitionExtractor;
+use SoftFineWare\OpenapiGenerator\Deffenition\ClassDefinitionData;
+use SoftFineWare\OpenapiGenerator\OpenApi\DefinitionExtractor\ObjectDefinitionExtractor;
 
 class ResponseExtractor
 {
